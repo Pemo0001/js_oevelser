@@ -1,3 +1,5 @@
+/* INDEX */
+
 const knap = document.querySelectorAll("img");
 
 knap.forEach((img) => {
@@ -11,6 +13,8 @@ function hvilkenDrik() {
     console.log("Alkoholfri");
   }
 }
+
+/* SIG GODDAG */
 
 function sigGoddag() {
   let currentHours = new Date().getHours();
@@ -27,3 +31,20 @@ function sigGoddag() {
 }
 
 sigGoddag();
+
+/* GÆT ET TAL */
+
+let tilfaeldigtTal = Math.round(Math.random() * 10);
+const knap2 = document.querySelector("#submit");
+
+knap2.addEventListener("click", erTalletRigtigt);
+
+function erTalletRigtigt() {
+  if (tilfaeldigtTal == document.querySelector("#tal").value) {
+    alert("Tallet er rigtigt!");
+  } else {
+    alert("Tallet er forkert!");
+  }
+}
+
+console.log(tilfaeldigtTal);
